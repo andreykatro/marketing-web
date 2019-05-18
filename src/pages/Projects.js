@@ -13,10 +13,16 @@ class Projects extends Component {
   getProjItems() {
     let i = 0;
     return images.map(img => {
+      //const str = "For more information, see Chapter 3.4.5.1";
+      const re = /[ \w-]+\./;
+      const found = img.match(re) + '';
+      const res = found.replace(/-/g, " ");
+
       return (
         <Col key={++i + "_" + Math.random} style={{ marginTop: "2rem" }}>
           <Card style={{ width: "18rem", height: "18rem", border: 0 }}>
             <Card.Img src={img} key={++i + "_" + Math.random} />
+            <Card.Title>{res.charAt(0).toUpperCase()+res.slice(1)}</Card.Title>
           </Card>
         </Col>
       );
