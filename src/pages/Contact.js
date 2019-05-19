@@ -62,7 +62,7 @@ class Contact extends Component {
                     <Card.Title className="card-title-ls text-white d-flex justify-content-center font-weight-bold text-center">Would you prefer to talk to someone in person?</Card.Title>
                     <div className="contact-block">
                       <Card.Text className="d-flex justify-content-center">Last updated 3 mins ago:</Card.Text>
-                      <Card.Link href="tel:888-33-7777" className="contact-button-link justify-content-center"><i class="fa fa-mobile-phone"></i> 888-33-7777</Card.Link>
+                      <Card.Link href="tel:888-33-7777" className="contact-button-link justify-content-center"><i className="fa fa-mobile-phone"></i> 888-33-7777</Card.Link>
                     </div>
                   </Card.ImgOverlay>
                 </Card>

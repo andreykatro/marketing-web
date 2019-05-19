@@ -13,7 +13,6 @@ class Projects extends Component {
   getProjItems() {
     let i = 0;
     return images.map(img => {
-      //const str = "For more information, see Chapter 3.4.5.1";
       const re = /[ \w-]+\./;
       const found = img.match(re) + '';
       const res = found.replace(/-/g, " ");
