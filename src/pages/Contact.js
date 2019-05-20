@@ -8,6 +8,14 @@ class Contact extends Component {
     super();
     this.state = {};
     this.state.contact = {};
+    this.state = {
+      FullName:  '',
+      Company: '',
+      Email: '',
+      Phone: '',
+      ProjectedMonthlyBudget: '',
+      Comments: ''
+    };
 
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -46,14 +54,6 @@ class Contact extends Component {
           ProjectedMonthlyBudget: '',
           Comments: ''
         }
-        // , () => {
-        //   event.target.elements['FullName'] = this.state.FullName;
-        //   event.target.elements['Company'] = this.state.Company;
-        //   event.target.elements['Email'] = this.state.Email;
-        //   event.target.elements['Phone'] = this.state.Phone;
-        //   event.target.elements['ProjectedMonthlyBudget'] = this.state.ProjectedMonthlyBudget;
-        //   event.target.elements['Comments'] = this.state.Comments;
-        // }
         );
 
       })
