@@ -45,7 +45,17 @@ class Contact extends Component {
           Phone: '',
           ProjectedMonthlyBudget: '',
           Comments: ''
-        });
+        }
+        // , () => {
+        //   event.target.elements['FullName'] = this.state.FullName;
+        //   event.target.elements['Company'] = this.state.Company;
+        //   event.target.elements['Email'] = this.state.Email;
+        //   event.target.elements['Phone'] = this.state.Phone;
+        //   event.target.elements['ProjectedMonthlyBudget'] = this.state.ProjectedMonthlyBudget;
+        //   event.target.elements['Comments'] = this.state.Comments;
+        // }
+        );
+
       })
   }
 
@@ -62,9 +72,10 @@ class Contact extends Component {
             <div className="contact-container">
               <Form onSubmit={this.handleSubmit}>
                 <Form.Group controlId="contact-control-input">
-                  <Form.Control name='FullName' placeholder="Full Name:" required onChange={this.handleInputChange} />
-                  <Form.Control name='Company' placeholder="Company:" onChange={this.handleInputChange} />
+                  <Form.Control name='FullName' placeholder="Full Name:" required onChange={this.handleInputChange} value={this.state.FullName} />
+                  <Form.Control name='Company' placeholder="Company:" onChange={this.handleInputChange} value={this.state.Company} />
                   <Form.Control
+                   value={this.state.Email}
                     name='Email'
                     type="email"
                     placeholder="name@example.com"
@@ -72,6 +83,7 @@ class Contact extends Component {
                     onChange={this.handleInputChange}
                   />
                   <Form.Control
+                  value={this.state.Phone}
                     name='Phone'
                     type="tel"
                     placeholder="Phone:"
@@ -80,7 +92,7 @@ class Contact extends Component {
                   />
                 </Form.Group>
                 <Form.Group controlId="contact-control-select">
-                  <Form.Control name='ProjectedMonthlyBudget' as="select" onChange={this.handleInputChange}>
+                  <Form.Control value={this.state.ProjectedMonthlyBudget} name='ProjectedMonthlyBudget' as="select" onChange={this.handleInputChange}>
                     <option value="">Projected Monthly Budget For Project:</option>
                     <option value="Unknown">Unknown</option>
                     <option value="300-750/mo">$300 – $750/mo.</option>
@@ -92,6 +104,7 @@ class Contact extends Component {
                 </Form.Group>
                 <Form.Group controlId="contact-control-textarea">
                   <Form.Control
+                  value={this.state.Comments}
                     name='Comments'
                     as="textarea"
                     rows="4"

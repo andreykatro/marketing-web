@@ -209,7 +209,7 @@ class Home extends Component {
           <h3 className="services-subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h3>
-          <Container className="team-container">
+          <Container>
             <Row>{this.getCardImgItems()}</Row>
           </Container>
         </div>

@@ -53,7 +53,6 @@ a:hover{
 }
 .services-title, .services-subtitle{
   text-align: center;
-  margin: 1rem, 0;
   font-weight: bold;
 }
 #about{
@@ -119,3 +118,18 @@ a:hover{
   width: '18rem';
   margin: 1rem 0;
 }
+
+
+#services, #about, #team h2,h3{
+  margin: 1rem 0;
+}
+
+.card-services-component {
+  margin: 1rem 0;
+  width: 350px;
+}
+
+.card-title, .card-subtitle{
+  margin-bottom: 1rem;
+}
+
