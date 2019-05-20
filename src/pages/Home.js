@@ -3,12 +3,6 @@ import HomeCarousel from "../components/HomeCarousel";
 import CardServices from "../components/CardServices";
 import CardImg from "../components/CardImg";
 import { Container, Row, Col } from "react-bootstrap";
-import employee1 from "../img/employees/employee1.jpg";
-import employee2 from "../img/employees/employee2.jpg";
-import employee3 from "../img/employees/employee3.jpg";
-import employee4 from "../img/employees/employee4.jpg";
-import employee5 from "../img/employees/employee5.jpg";
-import employee6 from "../img/employees/employee6.jpg";
 
 class Home extends Component {
   constructor() {
@@ -69,7 +63,7 @@ class Home extends Component {
         id: 1,
         title: "Tom Hanks",
         subtitle: "PRESIDENT",
-        srcImg: employee1,
+        srcImg: "http://drive.google.com/uc?export=download&id=1WI_eZBEbwcT9G4jqNeIfqEi1kpCsdWWt",
         text:
           "The founder and visionary behind our company, with over 36 years experience."
       },
@@ -77,7 +71,7 @@ class Home extends Component {
         id: 2,
         title: "Amy Adams",
         subtitle: "ACCOUNT COORDINATOR",
-        srcImg: employee2,
+        srcImg: "http://drive.google.com/uc?export=download&id=1bs89HDqf80klVD8VhYUtvbq02nsksUEL",
         text:
           "The face behind our emails, managing our client's accounts and social medias."
       },
@@ -85,7 +79,7 @@ class Home extends Component {
         id: 3,
         title: "Christine Ko",
         subtitle: "DESIGN | SOCIAL MEDIA",
-        srcImg: employee3,
+        srcImg: "http://drive.google.com/uc?export=download&id=1kL2yJEU9ygn_ZW6Q1u1RdYaaaPmKCn6_",
         text:
           "Lending a hand wherever needed, whether it's design or social media content."
       },
@@ -93,7 +87,7 @@ class Home extends Component {
         id: 4,
         title: "Morgan Freeman",
         subtitle: "ART DIRECTOR",
-        srcImg: employee4,
+        srcImg: "http://drive.google.com/uc?export=download&id=187fh57OOI_V9h_uU8HD5SpzwnLIJlpBg",
         text:
           "Creates fresh, compelling design. Solves problems and tells effective stories."
       },
@@ -101,14 +95,14 @@ class Home extends Component {
         id: 5,
         title: "Halle Berry",
         subtitle: "SOCIAL MEDIA COORDINATOR",
-        srcImg: employee5,
+        srcImg: "http://drive.google.com/uc?export=download&id=1v1XeK-_YEDTrnNcHFxHkW1ni7RvJzaXg",
         text: "The whiz behind our social media curtain."
       },
       {
         id: 6,
         title: "Jack Nicholson",
         subtitle: "CHIEF FINANCIAL OFFICER",
-        srcImg: employee6,
+        srcImg: "http://drive.google.com/uc?export=download&id=1MV85rcXhBn_TTZT6bGNwmkqzpQMAJEtq",
         text:
           "The founder and visionary behind our company, with over 36 years experience."
       }

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Form, Container, Button, Row, Col, Card} from "react-bootstrap";
-import imgBackground from "../img/contact.jpg"
 import axios from 'axios';
+
+const imgBackground =  "http://drive.google.com/uc?export=download&id=13LvlS8R8bbQgu5IAu8AkxUfweIuaAw0i";
 
 class Contact extends Component {
   constructor() {

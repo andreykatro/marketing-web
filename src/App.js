@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import {Container} from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -23,7 +24,22 @@ class App extends Component {
             <Route exact path="/projects" component={Projects}/>
             <Route exact path="/contact" component={Contact}/>
           </Switch>
-          <footer className="app-footer" />
+          <footer className="app-footer">
+            <Container>
+              <div className="d-sm-flex justify-content-between">
+                <div className="footer-left">
+                  <a href="#">Terms and conditions</a> 
+                  <a href="#">Privacy</a>
+                </div>
+                <div className="footer-right">
+                  <span>Follow</span>
+                  <a href="#"><i className="fab fa-facebook"></i></a>
+                  <a href="#"><i className="fab fa-twitter"></i></a>
+                  <a href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </Container>
+          </footer>
         </div>
       </BrowserRouter>
     );
