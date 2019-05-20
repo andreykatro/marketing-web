@@ -42,7 +42,8 @@ class Contact extends Component {
     contact.ProjectedMonthlyBudget =  this.state.ProjectedMonthlyBudget;
     contact.Comments =  this.state.Comments;
 
-    axios.post(`https://localhost:44340/api/contact`, contact)
+    //axios.post(`https://localhost:44340/api/contact`, contact)
+    axios.post(`https://marketing-web-api.herokuapp.com/api/contact`, contact)
       .then(res => {
         console.log(res);
         console.log(res.data);
