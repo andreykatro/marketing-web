@@ -1,8 +1,54 @@
 import React, { Component } from "react";
 import { Form, Container, Button, Row, Col, Card} from "react-bootstrap";
 import imgBackground from "../img/contact.jpg"
+import axios from 'axios';
 
 class Contact extends Component {
+  constructor() {
+    super();
+    this.state = {};
+    this.state.contact = {};
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const contact = {};
+    contact.Id = 0;
+    contact.FullName = this.state.FullName;
+    contact.Company =  this.state.Company;
+    contact.Email = this.state.Email;
+    contact.Phone = this.state.Phone;
+    contact.ProjectedMonthlyBudget =  this.state.ProjectedMonthlyBudget;
+    contact.Comments =  this.state.Comments;
+
+    axios.post(`https://localhost:44340/api/contact`, contact)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+        this.setState({
+          FullName:  '',
+          Company: '',
+          Email: '',
+          Phone: '',
+          ProjectedMonthlyBudget: '',
+          Comments: ''
+        });
+      })
+  }
+
   render() {
     return (
       <Container>
@@ -14,24 +60,27 @@ class Contact extends Component {
         <Row className="justify-content-lg-center">
           <Col lg={4}>
             <div className="contact-container">
-              <Form >
+              <Form onSubmit={this.handleSubmit}>
                 <Form.Group controlId="contact-control-input">
-                  <Form.Control placeholder="Full Name:" required />
-                  <Form.Control placeholder="Company:" />
+                  <Form.Control name='FullName' placeholder="Full Name:" required onChange={this.handleInputChange} />
+                  <Form.Control name='Company' placeholder="Company:" onChange={this.handleInputChange} />
                   <Form.Control
+                    name='Email'
                     type="email"
                     placeholder="name@example.com"
                     required
+                    onChange={this.handleInputChange}
                   />
                   <Form.Control
+                    name='Phone'
                     type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     placeholder="Phone:"
                     required
+                    onChange={this.handleInputChange}
                   />
                 </Form.Group>
                 <Form.Group controlId="contact-control-select">
-                  <Form.Control as="select">
+                  <Form.Control name='ProjectedMonthlyBudget' as="select" onChange={this.handleInputChange}>
                     <option value="">Projected Monthly Budget For Project:</option>
                     <option value="Unknown">Unknown</option>
                     <option value="300-750/mo">$300 – $750/mo.</option>
@@ -43,9 +92,11 @@ class Contact extends Component {
                 </Form.Group>
                 <Form.Group controlId="contact-control-textarea">
                   <Form.Control
+                    name='Comments'
                     as="textarea"
                     rows="4"
                     placeholder="Questions/Comments:"
+                    onChange={this.handleInputChange}
                   />
                 </Form.Group>
                 <Button variant="success" type="submit" size="lg" block>
