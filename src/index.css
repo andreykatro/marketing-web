@@ -114,3 +114,8 @@ a:hover{
 .card-title-ls{
   letter-spacing: 0.2rem;
 }
+
+.card-img-component {
+  width: '18rem';
+  margin: 1rem 0;
+}
