@@ -10,7 +10,7 @@ class CardImg extends Component {
   render() {
     const cardImg = this.state.cardImg;
     return (
-      <Card className="card-img-component">
+      <Card className="card-img-component" data-aos="zoom-out">
         <Card.Img variant="top" src={cardImg.srcImg} />
         <Card.Body>
           <Card.Title>{cardImg.title}</Card.Title>

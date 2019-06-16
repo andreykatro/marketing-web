@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Modal} from "react-bootstrap";
 
 class ProjectModalWindow extends Component {
-
   render() {
     return (
       <Modal

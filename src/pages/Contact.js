@@ -63,7 +63,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{paddingTop: -20, paddingBottom: -20}}>
         <Row>
             <Col>
                 <h2 className="contact-title">We are happy to answer all your questions.</h2>
@@ -121,14 +121,17 @@ class Contact extends Component {
             </div>
           </Col>
           <Col lg={7}>
-              <div className="contact-container d-flex justify-content-center">
-                <Card className="bg-dark text-white ">
+              <div className="contact-container d-flex text-center" style={{minWidth: '100%', minHeight: "100%"}}>
+                <Card className="bg-dark text-white" style={{minWidth: '100%', minHeight: "100%"}}>
                   <Card.Img src={imgBackground} alt="Card image" />
                   <Card.ImgOverlay>
-                    <Card.Title className="card-title-ls text-white d-flex justify-content-center font-weight-bold text-center">Would you prefer to talk to someone in person?</Card.Title>
+                    <Card.Title className="card-title-ls font-weight-bold focus-in-expand-fwd">Would you prefer to talk to someone in person?</Card.Title>
+                    
                     <div className="contact-block">
-                      <Card.Text className="d-flex justify-content-center">Last updated 3 mins ago:</Card.Text>
-                      <Card.Link href="tel:888-33-7777" className="contact-button-link justify-content-center"><i className="fa fa-mobile-phone"></i> 888-33-7777</Card.Link>
+                      <Card.Text >Last updated 3 mins ago:</Card.Text>
+                      <div className="tracking-in-expand-fwd-bottom ">
+                        <Card.Link href="tel:888-33-7777" className="contact-button-link"><i className="fa fa-mobile-phone"></i> 888-33-7777</Card.Link>
+                      </div>
                     </div>
                   </Card.ImgOverlay>
                 </Card>

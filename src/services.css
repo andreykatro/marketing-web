@@ -1,0 +1,22 @@
+.col-card-items{
+    position: relative;
+    width: 50%;
+}
+
+.services-card-title{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+}
+
+.card-services-component {
+    margin: 1rem 0;
+    min-width: 320px;
+    border: none;
+}
+
+.services-title, .services-subtitle{
+    text-align: center;
+    font-weight: bold;
+}
+  

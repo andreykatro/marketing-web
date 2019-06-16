@@ -6,6 +6,7 @@ body {
   color: #626262;
 }
 
+
 img{
   max-width: 100%;
   height: auto;
@@ -19,10 +20,6 @@ a:hover{
   color: #898377
 }
 
-.app-header nav{
-  background: #fff;
-  height: 70px;
-}
 .navbar-brand{
   font-size: 30px;
   color: #000;
@@ -47,14 +44,18 @@ a:hover{
   transform: scale(1);
 }
 
+.home-content{
+  width: 100%;
+}
+
 #services, #about, #team{
   min-height:100vh;
   padding-top:70px;
+  width:100%;
 }
-.services-title, .services-subtitle{
-  text-align: center;
-  font-weight: bold;
-}
+
+/* <div id="circle-bottom"></div>               */
+
 #about{
   background-color: whitesmoke;
 }
@@ -88,7 +89,9 @@ a:hover{
   text-align: center;
   color: #000;
   border-radius:  0.5rem;
+  min-width: 100px;
 }
+
 .contact-button-link:hover{
   color: #000;
   opacity: 0.8;
@@ -104,6 +107,7 @@ a:hover{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   display: block;
+  min-width: 300px;
 }
 
 .card-title-ls{
@@ -115,15 +119,11 @@ a:hover{
   margin: 1rem 0;
 }
 
-
-#services, #about, #team h2,h3{
+/* 
+#about, #team h2,h3{
   margin: 1rem 0;
-}
+} */
 
-.card-services-component {
-  margin: 1rem 0;
-  width: 350px;
-}
 
 .card-title, .card-subtitle{
   margin-bottom: 1rem;
@@ -205,4 +205,139 @@ a:hover{
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width: 320){
   
+}
+.tracking-in-expand-fwd-bottom {
+	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+            transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+            transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.focus-in-expand-fwd {
+	-webkit-animation: focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand-fwd 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+            transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-800px);
+            transform: translateZ(-800px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+}
+.navbar-toggler:focus {
+  outline-width: 0px;
+}
+
+.services-main-content {
+  width: 400px;
+  height: 400px;
+  background-color: #626262;
+  color: #fff;
+  display: table; 
+  shape-outside: polygon(0px 148px, 155px 11px, 319px 55px, 380px 164px, 343px 361px, 72px 298px) content-box;
+  clip-path: polygon(0px 148px, 155px 11px, 319px 55px, 380px 164px, 343px 361px, 72px 298px);
+  top:50%;
+  bottom: 50%;
+
+
+}
+.services-main-content > p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.img-container{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    background: #626262;
+}
+.img-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* .card-deck {
+
+} */
+/* 
+.card-services-modern{
+  width: 100px;
+  height: 250px;
+  background-color: #626262;
+  transform: rotate(45deg);
+  margin: 80px auto;
+
+} */

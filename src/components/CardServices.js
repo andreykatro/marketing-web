@@ -10,15 +10,15 @@ class CardServices extends Component {
   render() {
     const card = this.state.card;
     return (
-      <div className="card-deck">
-        <Card className="card-services-component">
-          <Card.Body>
-            <Card.Title className="card-title">{card.title}</Card.Title>
-            <Card.Text>{card.text}</Card.Text>
-            <Card.Link href={card.link}>{card.linkText}</Card.Link>
-          </Card.Body>
-        </Card>
-        </div>
+        <div data-aos="flip-up">
+          <Card className="card-services-component">
+            <Card.Body>
+              <Card.Title className="services-card-title">{card.title}</Card.Title>
+              <Card.Text>{card.text}</Card.Text>
+              {/* <Card.Link href={card.link}>{card.linkText}</Card.Link> */}
+            </Card.Body>
+          </Card>
+          </div>
     );
   }
 }

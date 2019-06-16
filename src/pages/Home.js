@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import HomeCarousel from "../components/HomeCarousel";
+// import HomeCarousel from "../components/HomeCarousel";
 import CardServices from "../components/CardServices";
 import CardImg from "../components/CardImg";
 import { Container, Row, Col } from "react-bootstrap";
+import "../home.css";
+import "../services.css";
 
 class Home extends Component {
   constructor() {
@@ -35,7 +37,7 @@ class Home extends Component {
       },
       {
         id: 4,
-        title: "Ecommerce",
+        title: "E-commerce",
         text:
           "For e-commerce, we offer market research, brand analysis, media strategy optimization, logo design and advertising products. As well we will promote the brand taking into account the target audience, business needs, competitiveness, profitability of projects and goods. For the existing business, we can reform the web content so it becomes more understandable and more efficiently sold. For start-ups, we offer completely new websites and online stores, filling up their required media, developing media strategies and promoting brands.",
         link: "#",
@@ -58,12 +60,14 @@ class Home extends Component {
         linkText: "Learn More."
       }
     ];
-    this.state.cardsImg = [
+    this.state.cardsImg = 
+    [
       {
         id: 1,
         title: "Tom Hanks",
         subtitle: "PRESIDENT",
-        srcImg: "http://drive.google.com/uc?export=download&id=1WI_eZBEbwcT9G4jqNeIfqEi1kpCsdWWt",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=1WI_eZBEbwcT9G4jqNeIfqEi1kpCsdWWt",
         text:
           "The founder and visionary behind our company, with over 36 years experience."
       },
@@ -71,7 +75,8 @@ class Home extends Component {
         id: 2,
         title: "Amy Adams",
         subtitle: "ACCOUNT COORDINATOR",
-        srcImg: "http://drive.google.com/uc?export=download&id=1bs89HDqf80klVD8VhYUtvbq02nsksUEL",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=1bs89HDqf80klVD8VhYUtvbq02nsksUEL",
         text:
           "The face behind our emails, managing our client's accounts and social medias."
       },
@@ -79,7 +84,8 @@ class Home extends Component {
         id: 3,
         title: "Christine Ko",
         subtitle: "DESIGN | SOCIAL MEDIA",
-        srcImg: "http://drive.google.com/uc?export=download&id=1kL2yJEU9ygn_ZW6Q1u1RdYaaaPmKCn6_",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=1kL2yJEU9ygn_ZW6Q1u1RdYaaaPmKCn6_",
         text:
           "Lending a hand wherever needed, whether it's design or social media content."
       },
@@ -87,7 +93,8 @@ class Home extends Component {
         id: 4,
         title: "Morgan Freeman",
         subtitle: "ART DIRECTOR",
-        srcImg: "http://drive.google.com/uc?export=download&id=187fh57OOI_V9h_uU8HD5SpzwnLIJlpBg",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=187fh57OOI_V9h_uU8HD5SpzwnLIJlpBg",
         text:
           "Creates fresh, compelling design. Solves problems and tells effective stories."
       },
@@ -95,14 +102,16 @@ class Home extends Component {
         id: 5,
         title: "Halle Berry",
         subtitle: "SOCIAL MEDIA COORDINATOR",
-        srcImg: "http://drive.google.com/uc?export=download&id=1v1XeK-_YEDTrnNcHFxHkW1ni7RvJzaXg",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=1v1XeK-_YEDTrnNcHFxHkW1ni7RvJzaXg",
         text: "The whiz behind our social media curtain."
       },
       {
         id: 6,
         title: "Jack Nicholson",
         subtitle: "CHIEF FINANCIAL OFFICER",
-        srcImg: "http://drive.google.com/uc?export=download&id=1MV85rcXhBn_TTZT6bGNwmkqzpQMAJEtq",
+        srcImg:
+          "http://drive.google.com/uc?export=download&id=1MV85rcXhBn_TTZT6bGNwmkqzpQMAJEtq",
         text:
           "The founder and visionary behind our company, with over 36 years experience."
       }
@@ -112,7 +121,7 @@ class Home extends Component {
   getCardItems() {
     return this.state.cards.map(card => {
       return (
-        <Col md={4} key={card.id + Math.random}>
+        <Col md={6} xs={12} key={card.id + Math.random} className=" d-flex justify-content-center">
           <CardServices card={card} />
         </Col>
       );
@@ -122,7 +131,7 @@ class Home extends Component {
   getCardImgItems() {
     return this.state.cardsImg.map(item => {
       return (
-        <Col md={4} key={item.id + Math.random}>
+        <Col md={4} sm={6} xs={6} key={item.id + Math.random}>
           <CardImg cardImg={item} />
         </Col>
       );
@@ -130,78 +139,104 @@ class Home extends Component {
   }
 
   render() {
+    // let circleStyle = {
+    //   width: "100px",
+    //   height: "100px",
+    //   position: "absolute",
+    //   borderWidth: "3px",
+    //   borderStyle: "solid",
+    //   borderColor: "#F1F0F5",
+    //   top: "-42%",
+    //   left: "50%",
+    //   transform: "translate(-50%, 42%)",
+    // };
+    // let triangleStyle = {};
     return (
       <div className="home-content">
-        <div id="home">
-          <HomeCarousel />
+        <div id="home" className="home-start">
+          {/* <HomeCarousel /> */}
+          <div className="home-start-style">
+            <div className="home-main-slogan">
+              <h1 className="slogan-1">Think Different</h1>
+              <h2 className="slogan-2">The Pursuit Of Perfection</h2>
+            </div>
+            {/*               
+              <div className="home-main-circle-for-data-circle">
+                <div className="home-data-circle-0">
+                  <h1 className="text-center text-white">0</h1>
+                  <div className="home-triangle"></div>
+                </div>
+              <div className="home-data-circle-1">
+              <h1 className="text-center text-white">1</h1>
+                <div className="home-triangle"></div>
+              </div>
+              <div className="home-data-circle-2">
+              <h1 className="text-center text-white">2</h1>
+
+                <div className="home-triangle"></div>
+              </div> 
+
+              <div className="home-data-circle-3">
+              <h1 className="text-center text-white">3</h1>
+                <div className="home-triangle"></div>
+              </div> 
+              
+              <div className="home-data-circle-4">
+              <h1 className="text-center text-white">4</h1>
+                <div className="home-triangle"></div>
+              </div> 
+              
+              <div className="home-data-circle-5">
+              <h1 className="text-center text-white">5</h1>
+                <div className="home-triangle"></div>
+              </div> 
+              
+              <div className="home-data-circle-6">
+              <h1 className="text-center text-white">6</h1>
+                <div className="home-triangle"></div>
+              </div> 
+
+              <div className="home-start-style-circle">
+                <div className="home-start-style-shape" />
+                <div id="circle-top">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-left-top">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-left">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-left-bottom">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-right-top">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-right">
+                  <div id="circle-inside-style" />
+                </div>
+                <div id="circle-right-bottom">
+                  <div id="circle-inside-style" />
+                </div>
+              </div>
+            </div>
+           */}
+          </div>
         </div>
-        <div id="services">
+        <div id="services" >
           <h2 className="services-title">HOW WE CAN HELP</h2>
-          <h3 className="services-subtitle">
+          <h4 className="services-subtitle">
             We are a full-service marketing and design firm.
-          </h3>
+          </h4>
           <Container>
             <Row>{this.getCardItems()}</Row>
-          </Container>
-        </div>
-        <div id="about">
-          <Container>
-            <h2 className="services-title">ABOUT</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              tempus, nisl quis lacinia consectetur, velit nulla varius nisl, a
-              pharetra erat augue in lorem. Praesent nulla dolor, tincidunt nec
-              efficitur nec, tempus ac augue. Ut vehicula massa vel convallis
-              elementum. Duis ultrices tristique ex a volutpat. Fusce lobortis,
-              urna ut egestas faucibus, diam tellus porta nulla, eu imperdiet
-              elit lectus at tortor. Etiam neque nunc, suscipit vitae tempor et,
-              vestibulum eget odio. Morbi pellentesque mi ac est venenatis
-              ultrices. Phasellus eu porttitor mauris. Pellentesque eget nunc
-              accumsan felis auctor efficitur eu quis felis. Donec eget nunc
-              aliquam, suscipit nulla sit amet, auctor leo. Phasellus venenatis
-              vulputate lectus a maximus. Maecenas sollicitudin diam non
-              consequat feugiat. Mauris maximus lectus arcu, nec efficitur
-              mauris facilisis ut. Maecenas id velit id lorem accumsan
-              vulputate. Curabitur vel mi dui. Duis lobortis orci commodo,
-              consequat ante in, ornare lacus. Integer mollis dignissim est eget
-              vestibulum. Curabitur congue lacus eget consequat vulputate.
-              Maecenas sagittis urna ultrices, luctus lorem at, convallis augue.
-              Cras consequat sapien quam, at placerat arcu convallis a. Proin
-              sagittis eleifend elit eget fringilla. Donec eu purus tortor.
-              Mauris congue erat ligula. Integer laoreet tortor tortor, quis
-              ornare sem convallis a. Ut in scelerisque sapien. Donec in lorem
-              pellentesque, volutpat tellus sit amet, sollicitudin turpis. In
-              hac habitasse platea dictumst. Aenean ornare sed sem vitae
-              suscipit. Etiam sodales, augue at tincidunt fringilla, tortor
-              libero venenatis risus, varius suscipit dui magna nec urna.
-              Phasellus aliquam, erat quis dignissim suscipit, eros nisl
-              elementum purus, sit amet tristique sem nulla non lorem. Donec ut
-              nibh nec justo congue scelerisque. Nam malesuada, lorem at
-              imperdiet finibus, diam metus scelerisque magna, sit amet eleifend
-              eros mauris ut erat. Aenean quis mattis elit. Phasellus maximus
-              ullamcorper quam sit amet luctus. Quisque tincidunt nulla vitae mi
-              fringilla pharetra. Proin dictum diam dolor, quis sagittis odio
-              pharetra a. Vivamus elementum erat eget urna ullamcorper
-              vulputate. Pellentesque lobortis dui sem, eget semper risus congue
-              a. Sed condimentum laoreet ex et viverra. Quisque imperdiet in
-              massa vitae blandit. Sed consectetur et turpis eget molestie. Nam
-              porttitor interdum nibh id venenatis. Phasellus eu feugiat justo,
-              sit amet venenatis lacus. Mauris faucibus tincidunt risus, at
-              vestibulum erat venenatis eu. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed in congue turpis. Pellentesque
-              nec mauris vitae ipsum vulputate egestas. Curabitur et eleifend
-              urna. Pellentesque habitant morbi tristique senectus et netus et
-              malesuada fames ac turpis egestas. Nullam finibus luctus posuere.
-              Vivamus euismod purus sem, nec placerat nulla dignissim vitae.
-              Cras ut dictum nisl. Vivamus fermentum posuere mollis. Donec
-              egestas sed dui at lobortis.
-            </p>
           </Container>
         </div>
         <div id="team">
           <h2 className="services-title">MEET THE TEAM</h2>
           <h3 className="services-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit ament, consenter advising elite.
           </h3>
           <Container>
             <Row>{this.getCardImgItems()}</Row>
