@@ -192,22 +192,36 @@ a:hover{
   margin-bottom: 2.5rem;
 }
 
-@media only screen and (max-width: 1200px){
-
+@media (min-width: 1200px){
+  .slogan-1{
+    font-size: 3.5em;
+  }
+  .slogan-2{
+    font-size: 2em;
+  }
 }
-@media only screen and (max-width: 1199px){
+@media only screen and (max-width: 1200px){
+ 
   .nav-link{
     margin-left: 25px;
   }
 }
+@media only screen and (min-width: 1199px){
+
+}
 @media only screen and (max-width: 991px){
   .nav-link{
-    margin-left: 0;
-  }
+    margin-left: 0px;
+  } 
 }
 
 @media only screen and (max-width: 320){
-  
+  /* .nav-link{
+    margin-left: 0;
+  } */
+  /* .nav-link{
+    margin-left: 0;
+  } */
 }
 .tracking-in-expand-fwd-bottom {
 	-webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;

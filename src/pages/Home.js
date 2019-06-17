@@ -139,18 +139,6 @@ class Home extends Component {
   }
 
   render() {
-    // let circleStyle = {
-    //   width: "100px",
-    //   height: "100px",
-    //   position: "absolute",
-    //   borderWidth: "3px",
-    //   borderStyle: "solid",
-    //   borderColor: "#F1F0F5",
-    //   top: "-42%",
-    //   left: "50%",
-    //   transform: "translate(-50%, 42%)",
-    // };
-    // let triangleStyle = {};
     return (
       <div className="home-content">
         <div id="home" className="home-start">
@@ -158,70 +146,8 @@ class Home extends Component {
           <div className="home-start-style">
             <div className="home-main-slogan">
               <h1 className="slogan-1">Think Different</h1>
-              <h2 className="slogan-2">The Pursuit Of Perfection</h2>
+              <h4 className="slogan-2">The Pursuit Of Perfection</h4>
             </div>
-            {/*               
-              <div className="home-main-circle-for-data-circle">
-                <div className="home-data-circle-0">
-                  <h1 className="text-center text-white">0</h1>
-                  <div className="home-triangle"></div>
-                </div>
-              <div className="home-data-circle-1">
-              <h1 className="text-center text-white">1</h1>
-                <div className="home-triangle"></div>
-              </div>
-              <div className="home-data-circle-2">
-              <h1 className="text-center text-white">2</h1>
-
-                <div className="home-triangle"></div>
-              </div> 
-
-              <div className="home-data-circle-3">
-              <h1 className="text-center text-white">3</h1>
-                <div className="home-triangle"></div>
-              </div> 
-              
-              <div className="home-data-circle-4">
-              <h1 className="text-center text-white">4</h1>
-                <div className="home-triangle"></div>
-              </div> 
-              
-              <div className="home-data-circle-5">
-              <h1 className="text-center text-white">5</h1>
-                <div className="home-triangle"></div>
-              </div> 
-              
-              <div className="home-data-circle-6">
-              <h1 className="text-center text-white">6</h1>
-                <div className="home-triangle"></div>
-              </div> 
-
-              <div className="home-start-style-circle">
-                <div className="home-start-style-shape" />
-                <div id="circle-top">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-left-top">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-left">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-left-bottom">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-right-top">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-right">
-                  <div id="circle-inside-style" />
-                </div>
-                <div id="circle-right-bottom">
-                  <div id="circle-inside-style" />
-                </div>
-              </div>
-            </div>
-           */}
           </div>
         </div>
         <div id="services" >
